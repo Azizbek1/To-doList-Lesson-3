@@ -1,0 +1,71 @@
+.tasks{
+    &__title{
+      font-weight: 700;
+      font-size: 32px;
+      line-height: 39px;
+      color: #64c4ed;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #f2f2f2;
+      img{
+          opacity: 0.2;
+          margin-left: 15px; 
+          &:hover{
+              opacity: 1;
+              cursor: pointer;
+          }
+      }
+    }
+    &__items{
+        margin-top: 30px;
+        &-row{
+            display: flex;
+            align-items: center;
+            p{
+                font-size: 15px;
+            }
+        }
+    }
+    .checkbox{
+        margin-right: 10px;
+        &:hover{
+            label{
+                background: #f2f2f2;
+                border-color: #f2f2f2;
+                svg{
+                    opacity: 1;
+                    path{
+                        stroke: #b2b2b2;
+                    }
+                }
+            }
+        }
+       input{
+           display: none;
+       } 
+       label{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid #e8e8e8;
+            border-radius: 30px;
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+            svg{
+                opacity: 0;
+                position: relative;
+                left: 1px;
+            }
+       } 
+       input:checked + label {
+           background: #4dd599;
+           border-color: #4dd599;
+           svg{
+               opacity: 1;
+               path{
+                   stroke: #fff;
+               }
+           }
+       }
+    }
+  }
